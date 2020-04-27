@@ -1,5 +1,5 @@
 # fractals
-Having some fun with programming by generating pretty fractals with Python3. I will try periodically update this repo.
+Having some fun with programming by generating pretty fractals with Python3. I will try to periodically update this repo.
 
 ## ascii_fractals.py
 Outputs fractals comprised of ASCII/text characters to the console.
