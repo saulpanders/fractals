@@ -15,3 +15,6 @@ Select one of the following fractal types:
 * sierpinski_triangle
 * sierpinski_triangle_inf
 * sierpinski_carpet
+##### Example
+Sierpinski carpet n = 3
+![Carpet](/sample_ascii_carpet.png)
