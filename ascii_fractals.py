@@ -31,18 +31,20 @@ def sierpinski_triangle_inf():
 		print(bin(x)[2:].replace('0', ' '))
 		x ^= x << 2
 
+def main():
+	parser = argparse.ArgumentParser()
+	parser.add_argument('-n', '--number', type=int, default=3, help="Number of fractal iterations (default 3)")
+	parser.add_argument('-t', '--type',help='Type of ASCII fractal', nargs='?', choices=('sierpinski_carpet', 'sierpinski_triangle', 'sierpinski_triangle_inf'))
+	args = parser.parse_args()
 
-parser = argparse.ArgumentParser()
-parser.add_argument('-n', '--number', type=int, default=3, help="Number of fractal iterations (default 3)")
-parser.add_argument('-t', '--type',help='Type of ASCII fractal', nargs='?', choices=('sierpinski_carpet', 'sierpinski_triangle', 'sierpinski_triangle_inf'))
-args = parser.parse_args()
-
-if args.type:
-	if(args.type =="sierpinski_carpet"):
-		print(sierpinski_carpet(args.number))
-	elif args.type == "sierpinski_triangle":
-		print(sierpinski_triangle(args.number))
+	if args.type:
+		if(args.type =="sierpinski_carpet"):
+			print(sierpinski_carpet(args.number))
+		elif args.type == "sierpinski_triangle":
+			print(sierpinski_triangle(args.number))
+		else:
+			print(sierpinski_triangle_inf())
 	else:
-		print(sierpinski_triangle_inf())
-else:
-	print("Error, something went wrong...")
+		print("Error, something went wrong...")
+if __name__ == '__main__':
+	main()
